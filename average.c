@@ -11,7 +11,7 @@ int main(int argc, char *argv[]) {
         return 1;
     }
 
-    int sum = 0;
+    float sum = 0;
 
     // Loop through each command-line argument to calculate the sum
     for (int i = 1; i < argc; i++) {
