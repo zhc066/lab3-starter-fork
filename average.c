@@ -7,7 +7,7 @@
  */
 int main(int argc, char *argv[]) {
     if (argc < 3) {
-        printf("Error: Please provide at least two numbers.\nUsage: ./average <number 1> <number 2> ...\n");
+        printf("Error: Please provide at least two numbers.\nUsage: %s <number 1> <number 2> ...\n", argv[0]);
         return 1;
     }
 
