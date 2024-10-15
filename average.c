@@ -6,7 +6,8 @@
  * argv: Array of strings: argv[0] holds the program name as a string; the remaining indices hold the actual command-line arguments
  */
 int main(int argc, char *argv[]) {
-    if (argc < 3) {
+    int num_args = argc - 1; // argv[0] is program name
+    if (num_args < 2) {
         printf("Error: Please provide at least two numbers.\nUsage: %s <number 1> <number 2> ...\n", argv[0]);
         return 1;
     }
@@ -14,12 +15,12 @@ int main(int argc, char *argv[]) {
     float sum = 0;
 
     // Loop through each command-line argument to calculate the sum
-    int i;
-    for (i = 1; i < argc; i++) {
+    // First arg starts at argv[1]
+    for (int i = 1; i < argc; i++) {
         sum += atoi(argv[i]);
     }
 
-    // Calculate the average
+    // Calculate the average of all args
     float average = sum / 10;
 
     printf("Average: %.2f\n", average);
