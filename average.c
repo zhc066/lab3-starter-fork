@@ -2,8 +2,8 @@
 #include <stdlib.h>
 
 /*
- * argc: The number of command-line arguments the program received
- * argv: Array that contains the command-line arguments the program received
+ * argc: The length of the argv array below
+ * argv: Array of strings: argv[0] holds the program name as a string; the remaining indices hold the actual command-line arguments
  */
 int main(int argc, char *argv[]) {
     if (argc < 3) {
